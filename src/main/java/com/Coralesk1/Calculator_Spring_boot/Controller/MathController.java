@@ -37,6 +37,17 @@ public class MathController {
         }
         return calculator.div(num1, num2);
     }
-
+    @RequestMapping("/mean/{num1}/{num2}")
+    public Double mean(
+            @PathVariable Double num1,
+            @PathVariable Double num2) {
+        return calculator.mean(num1, num2);
+    }
+    @RequestMapping("/square/{num1}/{num2}")
+    public Double Square(
+            @PathVariable Double num1,
+            @PathVariable Double num2) {
+        return calculator.square(num1, num2);
+    }
 
 }
