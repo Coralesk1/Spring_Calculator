@@ -1,4 +1,5 @@
 package com.Coralesk1.Calculator_Spring_boot.Controller;
+import com.Coralesk1.Calculator_Spring_boot.Controller.Exception.ErrorException;
 import com.Coralesk1.Calculator_Spring_boot.model.Calculator;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,6 +32,9 @@ public class MathController {
     public Double div(
             @PathVariable Double num1,
             @PathVariable Double num2) {
+        if (num2 == 0){
+            throw new ErrorException("Não é possivel fazer divisões por 0");
+        }
         return calculator.div(num1, num2);
     }
 
