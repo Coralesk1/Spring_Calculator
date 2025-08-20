@@ -1,34 +1,36 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
     <title>Calculator</title>
 </head>
 <body>
-<div class="formCalculator">
-    
-    <h1>Calculator</h1>
-    <label>Numero 1</label>
-    <input type="number" id="input-num1">
+    <div class="formCalculator">
+        
+        <h1>Calculator</h1>
+        
+        <label>Numero 1</label>
+        <input type="number" id="input-num1">
 
-    <label>Numero 2</label>
-    <input type="number" id="input-num2">
+        <label>Numero 2</label>
+        <input type="number" id="input-num2">
 
-    <label>Choose an option:</label>
-    <select class="select-option">
-        <option value="sum">Sum</option>
-        <option value="sub">Subtraction</option>
-        <option value="mult">Multiplication</option>
-        <option value="div">Division</option>
-    </select>
-    
-    <button onclick="calculate()">Calculate</button>
-    <div id="out">
-
+        <label>Choose an option:</label>
+        <select class="select-option">
+            <option value="sum">Sum</option>
+            <option value="sub">Subtraction</option>
+            <option value="mult">Multiplication</option>
+            <option value="div">Division</option>
+            <option value="mean">Mean</option>
+            <option value="square">Square</option>
+        </select>
+        
+        <button onclick="calculate()">Calculate</button>
+        <div id="out"></div>
+        
     </div>
-    
-</div>
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
