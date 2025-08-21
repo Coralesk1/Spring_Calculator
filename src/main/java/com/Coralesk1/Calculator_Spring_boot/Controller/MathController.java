@@ -1,4 +1,5 @@
 package com.Coralesk1.Calculator_Spring_boot.Controller;
+
 import com.Coralesk1.Calculator_Spring_boot.Controller.Exception.ErrorException;
 import com.Coralesk1.Calculator_Spring_boot.model.Calculator;
 import org.springframework.web.bind.annotation.*;
@@ -9,42 +10,96 @@ import org.springframework.web.bind.annotation.*;
 public class MathController {
     private final Calculator calculator = new Calculator();
 
-    //soma
-    @RequestMapping("/sum/{num1}/{num2}")
-    public Double sum(@PathVariable Double num1, @PathVariable Double num2){
-        return calculator.sum(num1, num2);
-    }
-
-    //subtração
-    @RequestMapping("/sub/{num1}/{num2}")
-    public Double sub(@PathVariable Double num1, @PathVariable Double num2) {
-        return calculator.sub(num1, num2);
-    }
-
-    //multiplicação
-    @RequestMapping("/mult/{num1}/{num2}")
-    public Double mult(@PathVariable Double num1, @PathVariable Double num2) {
-        return calculator.mult(num1, num2);
-    }
-
-    //divisão
-    @RequestMapping("/div/{num1}/{num2}")
-    public Double div(@PathVariable Double num1, @PathVariable Double num2) {
-        if (num2 == 0){
-            throw new ErrorException("Não é possivel fazer divisões por 0");
+    // soma
+    @RequestMapping("/sum")
+    public Double sum(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
         }
-        return calculator.div(num1, num2);
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            return calculator.sum(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
     }
 
-    //média
-    @RequestMapping("/mean/{num1}/{num2}")
-    public Double mean(@PathVariable Double num1, @PathVariable Double num2) {
-        return calculator.mean(num1, num2);
+    // subtração
+    @RequestMapping("/sub")
+    public Double sub(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
+        }
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            return calculator.sub(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
     }
 
-    //raiz quadrada
-    @RequestMapping("/square/{num1}/{num2}")
-    public Double square(@PathVariable Double num1, @PathVariable Double num2) {
-        return calculator.square(num1, num2);
+    // multiplicação
+    @RequestMapping("/mult")
+    public Double mult(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
+        }
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            return calculator.mult(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
+    }
+
+    // divisão
+    @RequestMapping("/div")
+    public Double div(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
+        }
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            if (n2 == 0){
+                throw new ErrorException("Não é possivel fazer divisões por 0");
+            }
+            return calculator.div(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
+    }
+
+    // média
+    @RequestMapping("/mean")
+    public Double mean(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
+        }
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            return calculator.mean(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
+    }
+
+    // raiz quadrada
+    @RequestMapping("/square")
+    public Double square(@RequestParam String num1, @RequestParam String num2){
+        if (num1.isBlank() || num2.isBlank()){
+            throw new NumberFormatException("Inputs cannot be empty");
+        }
+        try {
+            Double n1 = Double.parseDouble(num1);
+            Double n2 = Double.parseDouble(num2);
+            return calculator.square(n1, n2);
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException("Only numbers");
+        }
     }
 }

@@ -1,11 +1,11 @@
 async function calculate(){
     const operation = document.querySelector(".select-option").value;
 
-    const num1 = Number(document.getElementById("input-num1").value);
-    const num2 = Number(document.getElementById("input-num2").value);
+    const num1 = document.getElementById("input-num1").value;
+    const num2 = document.getElementById("input-num2").value;
 
     try {
-        const response = await fetch(`http://localhost:8080/MathController/${operation}/${num1}/${num2}`); 
+        const response = await fetch(`http://localhost:8080/MathController/sum?num1=${num1}&num2=${num2}`);
         // fetch - retorna o corpo da resposta de servidor 
         if (!response.ok){
             /* .ok -  é uma propriedade da interface Response que retorna true se o código de 

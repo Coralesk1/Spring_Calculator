@@ -5,6 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -14,4 +15,10 @@ public class GlobalExceptionHandler {
                 .badRequest()  // status HTTP 400
                 .body(ex.getMessage()); // mensagem que vai para o frontend
     };
+    @ExceptionHandler(NumberFormatException.class)
+    public ResponseEntity<String> handleNumberFormat(NumberFormatException ex) {
+        return ResponseEntity
+                .badRequest()
+                .body(ex.getMessage());
+    }
 };
