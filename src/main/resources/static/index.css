@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fonte geral */
+    background: linear-gradient(135deg, #00ff7f, #32cd32); /* gradiente do fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.formCalculator {
+    background-color: #dfffdc;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.formCalculator:hover {
+    transform: scale(1.05);
+}
+
+.formCalculator h1 {
+    color: #006400;
+    margin-bottom: 25px;
+    font-size: 40px;
+}
+
+.formCalculator label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #008000;
+    font-weight: bold;
+    text-align: left;
+}
+
+.formCalculator input,
+.formCalculator select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #32cd32;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formCalculator input:focus,
+.formCalculator select:focus {
+    border-color: #00ff7f;
+    box-shadow: 0 0 8px #00ff7f;
+}
+
+.formCalculator button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background-color: #00ff7f;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formCalculator button:hover {
+    background-color: #32cd32;
+    transform: scale(1.05); /* aumenta o tamanho  */
+}
+
+#out {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #006400;
+    font-weight: bold;
+}
+
+.formCalculator option {
+    color: #1a8000
+} 
