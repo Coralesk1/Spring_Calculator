@@ -64,7 +64,7 @@ public class MathController {
         try {
             Double n1 = Double.parseDouble(num1);
             Double n2 = Double.parseDouble(num2);
-            if (n2 == 0){
+            if (n2.equals(0.0)){
                 throw new ErrorException("Não é possivel fazer divisões por 0");
             }
             return calculator.div(n1, n2);
