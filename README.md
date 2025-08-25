@@ -1,12 +1,19 @@
 # 🔢 Calculator
 A **Calculator** é uma aplicação desenvolvida para aprimorar minhas habilidades em APIs e programação Java. Ela oferece operações matemáticas básicas, incluindo soma, subtração, multiplicação, divisão, média e raiz quadrada, permitindo que o usuário realize cálculos de forma simples e intuitiva.
 
-## ✅ Status do projeto
-**Finalizado**
+## Status do projeto
+✅ **Finalizado**
 
 ## 🔨 Funcionalidades do projeto
 - `Funcionalidade 1`: Realiza operações matemáticas básicas.
 - `Funcionalidade 2`: Permite escolher a operação desejada interagindo com o menu "Choose an option:".
+## 🎥 Demonstração
+<img width="500" height="768" alt="{E6AD25DB-DDA3-4036-BD06-F40CE4B469B8}" src="https://github.com/user-attachments/assets/fa47fb80-b307-44aa-b5d4-e43ebbf6ec1c" />
+<img width="500" height="768" alt="{0C6F3EF4-777E-4750-897E-7D87380B1946}" src="https://github.com/user-attachments/assets/a54f1fb9-e0af-4a5f-a1e0-9a0ebbebd8cb" />
+<img width="500" height="767" alt="{941FEB46-ED6A-491D-917F-ECE8711F22BD}" src="https://github.com/user-attachments/assets/3ddb3969-5fbd-420f-90e2-bbfb13c89b2e" />
+<img width="500" height="768" alt="{E134360C-CD7F-4CC8-9C25-04E5FB2199C5}" src="https://github.com/user-attachments/assets/2484d24d-bce4-4cc0-bc8d-91e5587f63c1" />
+
+
 
 ## 📁 Acesso ao projeto
 Para acessar o código-fonte do projeto, siga os passos abaixo:
