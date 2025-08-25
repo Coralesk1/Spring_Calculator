@@ -58,9 +58,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias e ferramentas:
 - **Java 24** – Linguagem principal.
 - **Spring Boot** – Criação de APIs REST.
 - **Maven** – Gerenciamento de dependências.
-- **spring-boot-starter-web** – Endpoints e requisições HTTP.
-- **spring-boot-devtools** – Hot reload.
-- **spring-boot-starter-test** – Testes automatizados.
 
 ## Frontend
 - **HTML** – Estrutura das páginas.
